@@ -1,0 +1,14 @@
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\bin\Debug\net8.0\BankProject.exe
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\bin\Debug\net8.0\BankProject.deps.json
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\bin\Debug\net8.0\BankProject.runtimeconfig.json
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\bin\Debug\net8.0\BankProject.dll
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\bin\Debug\net8.0\BankProject.pdb
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\BankProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\BankProject.AssemblyInfoInputs.cache
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\BankProject.AssemblyInfo.cs
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\BankProject.csproj.CoreCompileInputs.cache
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\BankProject.dll
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\refint\BankProject.dll
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\BankProject.pdb
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\BankProject.genruntimeconfig.cache
+C:\Users\M.R.ro22\Documents\DOT_NET_TRAINING\BankProject\obj\Debug\net8.0\ref\BankProject.dll
