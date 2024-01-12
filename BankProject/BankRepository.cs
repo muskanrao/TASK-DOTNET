@@ -5,6 +5,7 @@ namespace BankProject
 {
     class BankRepository : IBankRepository
     {
+        BankingInputs ba = new BankingInputs();
         List<SBAccount> l1 = new List<SBAccount>();
         List<SBTransaction> l2 = new List<SBTransaction>();
         
@@ -59,7 +60,8 @@ namespace BankProject
                 if(st.AccountNumber == accno){
                     if(st.Amount < amt)
                     {
-                        Console.WriteLine("Not enough amount for withdrawal");
+                        //Console.WriteLine("Not enough amount for withdrawal");
+                         ba.CheckAmount(amt);
                         //Exception
                     }else{
                         st.Amount -= amt;
