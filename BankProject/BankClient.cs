@@ -31,6 +31,7 @@ namespace BankProject
             Console.WriteLine("Displaying all Account details for accno: ");
             //to get account details for accno: 1
             SBAccount se = b.GetAccountDetails(1);
+            Console.WriteLine(se.AccountNumber+" "+se.CustomerName+" "+se.CurrentBalance);
 
             Console.WriteLine("Amout after Deposit& Withdrawal: ");
             b.DepositAmount(1,12m);
@@ -40,6 +41,9 @@ namespace BankProject
 
             Console.WriteLine("Getting transaction for accno");
             List<SBTransaction> st = b.GetTransactions(12);
+            foreach(SBTransaction m in st){
+                Console.WriteLine(m.AccountNumber+" "+m.TransactionId+" "+m.TransactionType+" "+m.TransactionDate);
+            }
             
         }
     }
