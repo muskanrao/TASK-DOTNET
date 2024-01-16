@@ -89,7 +89,10 @@ namespace BankProject
                     Console.WriteLine("Default Case run");
                     break;
                     
-                }   
+                } 
+                if(value == false){
+                    break;
+                }  
             }
         }
     }
