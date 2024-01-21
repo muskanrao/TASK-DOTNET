@@ -1,0 +1,51 @@
+@model IEnumerable<FlightProject.Models.BookingsDetailM>
+
+@{
+    ViewData["Title"] = "BookFlight";
+}
+
+<h1>Review Your Booking</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Flight.SourceAirport.AirportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flight.DestAirport.AirportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flight.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CidNavigation.Cname)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Flight.SourceAirport.AirportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flight.DestAirport.AirportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flight.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CidNavigation.Cname)
+            </td>
+             <td>
+                <a asp-controller="Flight" asp-action="PaymentGateways"  class="btn btn-success">Process Payment</a>
+              
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

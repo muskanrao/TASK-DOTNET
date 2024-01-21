@@ -1,0 +1,61 @@
+@model FlightProject.Models.FlightsDetailM
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FlightId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FlightId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AirlineId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AirlineId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SourceAirportId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SourceAirportId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DestAirportId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DestAirportId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Atime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Atime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dtime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dtime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="GetAllFlights">Back to List</a>
+    </form>
+</div>

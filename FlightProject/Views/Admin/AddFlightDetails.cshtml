@@ -1,0 +1,59 @@
+@model FlightProject.Models.FlightsDetailM
+
+@{
+    ViewData["Title"] = "AddFlightDetails";
+}
+
+<h2>Add Flights</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddFlightDetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AirlineId" class="control-label"></label>
+                <select asp-for="AirlineId" class="form-control" asp-items="ViewBag.AirlineId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SourceAirportId" class="control-label"></label>
+                <select asp-for="SourceAirportId" class="form-control" asp-items="ViewBag.SourceAirportId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestAirportId" class="control-label"></label>
+                <select asp-for="DestAirportId" class="form-control" asp-items="ViewBag.DestAirportId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FlightDate" class="control-label"></label>
+                <input asp-for="FlightDate" class="form-control" type="date" />
+                <span asp-validation-for="FlightDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Atime" class="control-label"></label>
+                <input asp-for="Atime" class="form-control" />
+                <span asp-validation-for="Atime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dtime" class="control-label"></label>
+                <input asp-for="Dtime" class="form-control" />
+                <span asp-validation-for="Dtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,49 @@
+@model IEnumerable<FlightProject.Models.BookingsDetailM>
+
+@{
+    ViewData["Title"] = "ShowBookings";
+}
+
+<h1>Booking History</h1>
+
+<p>
+    <a asp-action="SearchFlights">Continue Booking</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flight.SourceAirport.AirportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flight.DestAirport.AirportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flight.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookingId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flight.SourceAirport.AirportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flight.DestAirport.AirportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flight.Price)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>

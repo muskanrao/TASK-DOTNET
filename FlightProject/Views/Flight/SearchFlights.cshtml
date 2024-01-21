@@ -1,0 +1,50 @@
+@model FlightProject.Models.FlightsDetailM
+
+@{
+    ViewData["Title"] = "SearchFlights";
+}
+
+<h1>Get Cheap Flights in One Simple Search</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SearchFlights">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            
+            <div class="form-group">
+                <label asp-for="SourceAirportId" class="control-label"></label>
+             
+              
+                  <select asp-for="SourceAirportId" class="form-control" asp-items="ViewBag.SourceAirportId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestAirportId" class="control-label"></label>
+            
+               
+                <select asp-for="DestAirportId" class="form-control" asp-items="ViewBag.DestAirportId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FlightDate" class="control-label"></label>
+                <input asp-for="FlightDate" class="form-control" type="date" />
+                <span asp-validation-for="FlightDate" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="FlightDate" class="control-label"></label>
+   
+               <select asp-for="FlightDate" class="form-control" asp-items="ViewBag.FlightDate"></select>
+              
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,71 @@
+@model IEnumerable<FlightProject.Models.FlightsDetailM>
+
+@{
+    ViewData["Title"] = "GetAllFlights";
+}
+
+<h1>All Added Flights</h1>
+
+<p>
+    <a asp-action="AddAirlines">Add Airline Details</a>
+</p>
+<p>
+    <a asp-action="AddAirports">Add Airport Details</a>
+</p>
+<p>
+    <a asp-action="AddFlightDetails">Add Flights</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Airline.AirlineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SourceAirport.AirportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DestAirport.AirportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Atime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dtime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Airline.AirlineName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SourceAirport.AirportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DestAirport.AirportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Atime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dtime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.FlightId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.FlightId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
